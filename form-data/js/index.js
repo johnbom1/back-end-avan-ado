@@ -6,17 +6,9 @@ function enviar() {
     const y = formData.get("segundo")
     console.log(typeof y)
 
-    const soma = parseFloat(x) + parseFloat(y);
-
-    const sub = parseFloat(x) - parseFloat(y);
-
-    const div = parseFloat(x) / parseFloat(y);
-
-    const multi = parseFloat(x) * parseFloat(y);
-
-    console.log("Soma: ", soma)
-    console.log("Subtração: ", sub)
-    console.log("Divisão: ", div)
-    console.log("Multiplicação: ", multi)
+    console.log("Soma: ", parseFloat(x) + parseFloat(y))
+    console.log("Subtração: ", parseFloat(x) - parseFloat(y))
+    console.log("Multiplicação: ", parseFloat(x) * parseFloat(y))
+    console.log("Divisão: ", parseFloat(x) / parseFloat(y))
 
     }
