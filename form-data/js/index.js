@@ -1,5 +1,5 @@
 
-function enviar() {
+function calcular() {
     const formData = new FormData(document.querySelector('form'))
     const x = formData.get("primeiro")
     console.log(x)
