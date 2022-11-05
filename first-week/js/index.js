@@ -98,3 +98,61 @@ chars.pop()
 // push para inserir no fim do array; unshift para inserir no início do array 
 chars.push('B')
 console.log(chars)
+
+//object literals
+
+const product = {
+    productName: 'Camisa',
+    price: 29.99,
+    inStock: true,
+    size: ['p', 'm', 'g']
+}
+
+console.log(product.price)
+console.log(product['price'])
+
+console.log(product['main color'])
+
+
+//destructuring - desestruturação
+
+let { productName, price } = product
+
+console.log(price)
+
+price = 30.99
+
+console.log(price)
+console.log(productName)
+
+
+const vector = [3, 7, 2, 45, 99]
+let [...vetor2] = vector
+
+console.log(vetor2)
+
+//JSON - JavaScript Object Notation
+//XML é concorrente do JSON
+
+//criando o objeto cachorro
+const dog = {
+    name: 'Scooby',
+    age: 10
+}
+
+console.log(dog)
+
+//transformando um objeto em um JSON
+
+const dogJson = JSON.stringify(dog)
+console.log(dogJson)
+
+//transformando um JSON em um objeto
+const dogObject = JSON.parse(dogJson)
+console.log(dogObject)
+
+const jsonErrado = '{"primeiro":"dado1","segundo":222,"terceiro":"dado3}'
+
+const jsonErradoObject = JSON.parse(jsonErrado)
+
+console.log(jsonErradoObject)
