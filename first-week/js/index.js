@@ -215,18 +215,18 @@ console.log(chars)
 
 // //métodos de arrays
 
-// const names = ['Jonatan', 'Paulo', 'Daniel', 'Victor']
+const names = ['Jonatan', 'Paulo', 'Daniel', 'Victor']
 
-// names.forEach(function(name){
-//     console.log(name)
-// })
+names.forEach(function(name){
+    console.log(name)
+})
 
-// const modifiedNames = names.map(function(name){
-//     if(name == 'Paulo')
-//         return ('Paulo Sampaio')
-//     else
-//         return name
-// })
+const modifiedNames = names.map(function(name){
+    if(name == 'Paulo')
+        return ('Paulo Sampaio')
+    else
+        return name
+})
 
 // modifiedNames.forEach(function(name){
 //     console.log(name)
@@ -296,6 +296,19 @@ console.log(fora())
 const aFunction = () => ((x=7), () =>(x+5)) ()
 
 console.log(aFunction())
+
+
+// arrow function usando apenas um parâmtro
+const namesLength = names.map( value => value.length )
+
+console.log(namesLength)
+
+//cópia da de cima, mas acessando o método length, a partir do objeto "{}"
+
+const namesLength2 = names.map( ({length}) => length )
+
+console.log(namesLength2)
+
 
 
 
