@@ -293,18 +293,9 @@ function fora(){
 console.log(fora())
 
 
-const aFunction = () => {
-    let x=7
-    const somarX5 = () => x+5
-    
-      return somarX5()
-}
+const aFunction = () => ((x=7), () =>(x+5)) ()
 
 console.log(aFunction())
-
-
-
-
 
 
 
