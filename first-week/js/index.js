@@ -90,110 +90,250 @@ console.log(chars)
 
 // Desafio: desenvolva uma calculadora para as 4 operações básicas usando const com os dados vindo de um formulário.
 
-function sum(){
-    const formData = new FormData(document.querySelector('form'))
-    const n1 = formData.get('n1')
-    const n2 = formData.get('n2')
-    console.log(n1+' '+n2)
+// function sum(){
+//     const formData = new FormData(document.querySelector('form'))
+//     const n1 = formData.get('n1')
+//     const n2 = formData.get('n2')
+//     console.log(n1+' '+n2)
+// }
+
+// // object literal
+
+// const product = {
+//     productName: 'Camisa',
+//     price: 29.99,
+//     inStock: true,
+//     size: ['p', 'm', 'g'],
+//     'main color': 'red'
+// }
+
+// console.log(product.size[product.size.length-1])
+// console.log(product.price)
+// console.log(product['main color'])
+
+// // destructuring - desestruturação
+
+// let { productName, price } = product
+// console.log(price)
+// price = 30.49
+// console.log(price)
+// console.log(product.price)
+
+// const vector = [3,7,2,45,99]
+// let [ v1, v2, ...otherVector] = vector
+// console.log(otherVector)
+
+// // JSON - JavaScript Object Notation
+// // XML é concorrente do JSON
+
+// // criando o objeto cachorro
+// const dog = {
+//     name: 'Scooby',
+//     age: 10
+// }
+// console.log(dog)
+// const dogJson = JSON.stringify(dog)
+// console.log(dogJson)
+// const dogObject = JSON.parse(dogJson)
+// console.log(dogObject)
+
+// //const jsonErrado = '{"primeiro":"dado1""segundo":222,"terceiro":"dado3}'
+// //const jsonErradoObject = JSON.parse(jsonErrado)
+
+// // Desafio 1: Armazene 5 dados numéricos em um vetor. Em seguida, copie para um objeto com as propriedades n1, n2, n3, n4 e n5. Utilize destructuring para copiar os valores para 5 variáveis. Construa um objeto JSON com os valores das variáveis.
+
+// const vectorChallenge = [77,45,3,8,123]
+
+// const objectChallenge = {
+//     n1: vectorChallenge[0],
+//     n2: vectorChallenge[1],
+//     n3: vectorChallenge[2],
+//     n4: vectorChallenge[3],
+//     n5: vectorChallenge[4],
+// }
+
+// const {n1, n2, n3, n4, n5} = objectChallenge
+
+// console.log(JSON.stringify({n1,n2,n3,n4,n5}))
+
+// // Desafio 2: Desenvolva uma calculadora que armazene em um objeto JSON o resultado das 4 operações básicas. Em outras palavras: crie um objeto calculadora, inicialize cada uma das operações da calculadora (que serão propriedades do objeto) com o resultado do processamento matemático vindo de duas variáveis e converta para um objeto JSON.
+
+// const num1 = 10
+// const num2 = 20
+// const calc = {
+//     soma: num1+num2,
+//     sub: num1-num2,
+//     mult: num1*num2,
+//     div: num1/num2
+// }
+// console.log(JSON.stringify(calc))
+
+
+
+// // estruturas, métodos de listas, funções
+// const n = 100
+// if(n > 10){ // > < >= <= == !=
+//     console.log('Teste de entrada no if.')
+// }
+// const texto = '0'
+// if(texto === 0)
+//     console.log("Os dados são iguais.")
+// else if(true) 
+//     console.log('Segundo if - if aninhado.')
+// else
+//     console.log('Saída...') // erro na hora de pensar o código...
+// // operador ternário
+// const resultado =  n > 20 ? true : false
+// console.log(resultado)
+// console.log(typeof resultado)
+// // repetição: precisa de 3 partes - variável de controle e a inicialização dela; condição/critério de parada; alteração do valor da variável de controle
+// let contador = 0
+// const lista = [1, 7, 3, 64, 2, 0]
+// while(contador < lista.length){
+//     console.log('O \'elemento\' da\n\n vez é ' + lista[contador] + '.')
+//     contador++ // contador = contador + 1
+// }
+// const outraLista = ['a', 'b', 'd', 'e', 'c']
+// for(let contador = 0; contador < outraLista.length; contador++)
+//     console.log(`O elemento da
+//     vez é ${outraLista[contador]}.`) //template literais, ou template strings
+
+
+// // atividade 07/11/2022
+
+// const a = 5
+// const b = 10
+// const out = ('Quinze é ' + (a+b) + '\ne não ' + (2*a+b) + '.')
+
+// console.log(out)
+
+// const out2 = (`Quinze é ${a+b} 
+// e não ${2*a+b}.`)
+
+// console.log(out2)
+
+
+// //métodos de arrays
+
+// const names = ['Jonatan', 'Paulo', 'Daniel', 'Victor']
+
+// names.forEach(function(name){
+//     console.log(name)
+// })
+
+// const modifiedNames = names.map(function(name){
+//     if(name == 'Paulo')
+//         return ('Paulo Sampaio')
+//     else
+//         return name
+// })
+
+// modifiedNames.forEach(function(name){
+//     console.log(name)
+// })
+
+
+// const numArray = [213,34,234,55,62,736,66,78,0,1,2,3,4,5,6].filter(function(num){
+//     return num < 10
+// })
+
+// numArray.forEach(function(name){
+//     console.log(name)
+// })
+
+// console.log(numArray)
+
+// const sumArray = numArray.reduce(function(num, total){
+//     return total+num
+// })
+
+// console.log(sumArray)
+
+
+//funções
+
+function myFunction(){
+    return ('Testando a minha função...')
+ }
+ 
+ console.log(myFunction())
+
+ console.log('')
+
+ function myFunction2(name, surname){
+    return `O nome completo é ${name} ${surname}`
+ }
+ 
+ console.log(myFunction2('Jonatan', 'Fragoso'))
+
+
+// Arrow Function === função anônima
+// function(data){ return 0 } é igual a (data) => { 0 }
+
+//Exemplo:
+
+const myNoArrowFunction = function(a,b){
+    return a+b
 }
 
-// object literal
+console.log(myNoArrowFunction(5,10))
 
-const product = {
-    productName: 'Camisa',
-    price: 29.99,
-    inStock: true,
-    size: ['p', 'm', 'g'],
-    'main color': 'red'
-}
+const myArrowFunction = (a,b) => a+b
 
-console.log(product.size[product.size.length-1])
-console.log(product.price)
-console.log(product['main color'])
-
-// destructuring - desestruturação
-
-let { productName, price } = product
-console.log(price)
-price = 30.49
-console.log(price)
-console.log(product.price)
-
-const vector = [3,7,2,45,99]
-let [ v1, v2, ...otherVector] = vector
-console.log(otherVector)
-
-// JSON - JavaScript Object Notation
-// XML é concorrente do JSON
-
-// criando o objeto cachorro
-const dog = {
-    name: 'Scooby',
-    age: 10
-}
-console.log(dog)
-const dogJson = JSON.stringify(dog)
-console.log(dogJson)
-const dogObject = JSON.parse(dogJson)
-console.log(dogObject)
-
-//const jsonErrado = '{"primeiro":"dado1""segundo":222,"terceiro":"dado3}'
-//const jsonErradoObject = JSON.parse(jsonErrado)
-
-// Desafio 1: Armazene 5 dados numéricos em um vetor. Em seguida, copie para um objeto com as propriedades n1, n2, n3, n4 e n5. Utilize destructuring para copiar os valores para 5 variáveis. Construa um objeto JSON com os valores das variáveis.
-
-const vectorChallenge = [77,45,3,8,123]
-
-const objectChallenge = {
-    n1: vectorChallenge[0],
-    n2: vectorChallenge[1],
-    n3: vectorChallenge[2],
-    n4: vectorChallenge[3],
-    n5: vectorChallenge[4],
-}
-
-const {n1, n2, n3, n4, n5} = objectChallenge
-
-console.log(JSON.stringify({n1,n2,n3,n4,n5}))
-
-// Desafio 2: Desenvolva uma calculadora que armazene em um objeto JSON o resultado das 4 operações básicas. Em outras palavras: crie um objeto calculadora, inicialize cada uma das operações da calculadora (que serão propriedades do objeto) com o resultado do processamento matemático vindo de duas variáveis e converta para um objeto JSON.
-
-const num1 = 10
-const num2 = 20
-const calc = {
-    soma: num1+num2,
-    sub: num1-num2,
-    mult: num1*num2,
-    div: num1/num2
-}
-console.log(JSON.stringify(calc))
+console.log(myArrowFunction(5,10))
 
 
 
-// estruturas, métodos de listas, funções
-const n = 100
-if(n > 10){ // > < >= <= == !=
-    console.log('Teste de entrada no if.')
-}
-const texto = '0'
-if(texto === 0)
-    console.log("Os dados são iguais.")
-else if(true) 
-    console.log('Segundo if - if aninhado.')
-else
-    console.log('Saída...') // erro na hora de pensar o código...
-// operador ternário
-const resultado =  n > 20 ? true : false
-console.log(resultado)
-console.log(typeof resultado)
-// repetição: precisa de 3 partes - variável de controle e a inicialização dela; condição/critério de parada; alteração do valor da variável de controle
-let contador = 0
-const lista = [1, 7, 3, 64, 2, 0]
-while(contador < lista.length){
-    console.log('O \'elemento\' da\n\n vez é ' + lista[contador] + '.')
-    contador++ // contador = contador + 1
-}
-const outraLista = ['a', 'b', 'd', 'e', 'c']
-for(let contador = 0; contador < outraLista.length; contador++)
-    console.log(`O elemento da
-    vez é ${outraLista[contador]}.`) //template literais, ou template strings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
