@@ -272,15 +272,35 @@ function myFunction(){
 
 //Exemplo:
 
-const myNoArrowFunction = function(a,b){
-    return a+b
+// const myNoArrowFunction = function(a,b){
+//     return a+b
+// }
+
+// console.log(myNoArrowFunction(5,10))
+
+// const myArrowFunction = (a,b) => a+b
+
+// console.log(myArrowFunction(5,10))
+
+function fora(){
+    let x = 7
+    function somarXMais5(){
+        return x+5
+    }
+    return somarXMais5()
 }
 
-console.log(myNoArrowFunction(5,10))
+console.log(fora())
 
-const myArrowFunction = (a,b) => a+b
 
-console.log(myArrowFunction(5,10))
+const aFunction = () => {
+    let x=7
+    const somarX5 = () => x+5
+    
+      return somarX5()
+}
+
+console.log(aFunction())
 
 
 
