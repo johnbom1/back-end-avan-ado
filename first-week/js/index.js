@@ -326,49 +326,67 @@ console.log(chars)
 
 //Orientação a objetos
 
-class Product {
-    constructor(name, price){
-        this.name = name
-        this.price = price
-    }
-    productDetails(){
-        return `O nome do produto é ${this.name} e o preço é: ${this.price}.`
-    }
-    static test(){
-        console.log('Testando o método estático...')
-    }
-}
+// class Product {
+//     constructor(name, price){
+//         this.name = name
+//         this.price = price
+//     }
+//     productDetails(){
+//         return `O nome do produto é ${this.name} e o preço é: ${this.price}.`
+//     }
+//     static test(){
+//         console.log('Testando o método estático...')
+//     }
+// }
 
-//instanciando um object Product
+// //instanciando um object Product
 
-const shirt = new Product('Camisa branca', 19.99)
-console.log(shirt.productDetails())
+// const shirt = new Product('Camisa branca', 19.99)
+// console.log(shirt.productDetails())
 
-//Usando método estático de uma classe.
+// //Usando método estático de uma classe.
 
-Product.test()
-
-
-// Herança
-
-class Tenis extends Product{
-    constructor(name, price, size){
-        super(name, price)
-        this.size = size
-    }
-    showNumber(){
-        return `O tamanho do ${this.name} é ${this.size}.`
-    }
-}
-
-const tenis = new Tenis('Tenis Nike Jordan', 12000.00, '42' )
-
-console.log(tenis.showNumber())
-
-console.log(tenis.productDetails())
+// Product.test()
 
 
+// // Herança
 
+// class Tenis extends Product{
+//     constructor(name, price, size){
+//         super(name, price)
+//         this.size = size
+//     }
+//     showNumber(){
+//         return `O tamanho do ${this.name} é ${this.size}.`
+//     }
+// }
+
+// const tenis = new Tenis('Tenis Nike Jordan', 12000.00, '42' )
+
+// console.log(tenis.showNumber())
+
+// console.log(tenis.productDetails())
+
+
+//DOM - Document Object Model
+
+console.log(document.getElementById('titulo'))
+console.log(document.getElementsByClassName('text'))
+
+
+const texts = document.querySelectorAll('.text')
+console.log(texts)
+
+
+texts.forEach((data) => console.log(data))
+
+texts[0].textContent = 'Estou alterando o primeiro parágrafo'
+
+texts[0].innerHTML = '<span> Testando uma alteração </span>'
+
+texts[1].style.backgroundColor = 'red'
+
+texts[2].remove()
 
 
 
