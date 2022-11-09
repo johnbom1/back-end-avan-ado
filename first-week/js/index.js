@@ -388,6 +388,18 @@ texts[1].style.backgroundColor = 'red'
 
 texts[2].remove()
 
+// adicionando evento
+// seleciona um elemento pelo id, armazenando em uma variável
+const button = document.querySelector('#btn')
+// rotina para a execução de alteração no estilo de um elemento a partir do clique
+button.addEventListener('click',()=>(texts[3].style.backgroundColor='orange'))
+
+// callbacks
+
+// promises
+
+// programação assíncrona
+
 
 
 
