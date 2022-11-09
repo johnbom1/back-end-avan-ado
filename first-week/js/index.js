@@ -349,8 +349,23 @@ console.log(shirt.productDetails())
 Product.test()
 
 
+// Herança
 
+class Tenis extends Product{
+    constructor(name, price, size){
+        super(name, price)
+        this.size = size
+    }
+    showNumber(){
+        return `O tamanho do ${this.name} é ${this.size}.`
+    }
+}
 
+const tenis = new Tenis('Tenis Nike Jordan', 12000.00, '42' )
+
+console.log(tenis.showNumber())
+
+console.log(tenis.productDetails())
 
 
 
