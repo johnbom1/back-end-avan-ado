@@ -215,18 +215,18 @@ console.log(chars)
 
 // //métodos de arrays
 
-const names = ['Jonatan', 'Paulo', 'Daniel', 'Victor']
+// const names = ['Jonatan', 'Paulo', 'Daniel', 'Victor']
 
-names.forEach(function(name){
-    console.log(name)
-})
+// names.forEach(function(name){
+//     console.log(name)
+// })
 
-const modifiedNames = names.map(function(name){
-    if(name == 'Paulo')
-        return ('Paulo Sampaio')
-    else
-        return name
-})
+// const modifiedNames = names.map(function(name){
+//     if(name == 'Paulo')
+//         return ('Paulo Sampaio')
+//     else
+//         return name
+// })
 
 // modifiedNames.forEach(function(name){
 //     console.log(name)
@@ -252,19 +252,19 @@ const modifiedNames = names.map(function(name){
 
 //funções
 
-function myFunction(){
-    return ('Testando a minha função...')
- }
+// function myFunction(){
+//     return ('Testando a minha função...')
+//  }
  
- console.log(myFunction())
+//  console.log(myFunction())
 
- console.log('')
+//  console.log('')
 
- function myFunction2(name, surname){
-    return `O nome completo é ${name} ${surname}`
- }
+//  function myFunction2(name, surname){
+//     return `O nome completo é ${name} ${surname}`
+//  }
  
- console.log(myFunction2('Jonatan', 'Fragoso'))
+//  console.log(myFunction2('Jonatan', 'Fragoso'))
 
 
 // Arrow Function === função anônima
@@ -282,32 +282,46 @@ function myFunction(){
 
 // console.log(myArrowFunction(5,10))
 
-function fora(){
-    let x = 7
-    function somarXMais5(){
-        return x+5
+// function fora(){
+//     let x = 7
+//     function somarXMais5(){
+//         return x+5
+//     }
+//     return somarXMais5()
+// }
+
+// console.log(fora())
+
+
+// const aFunction = () => ((x=7), () =>(x+5)) ()
+
+// console.log(aFunction())
+
+
+// // arrow function usando apenas um parâmtro
+// const namesLength = names.map( value => value.length )
+
+// console.log(namesLength)
+
+// //cópia da de cima, mas acessando o método length, a partir do objeto "{}"
+
+// const namesLength2 = names.map( ({length}) => length )
+
+// console.log(namesLength2)
+
+
+//closures
+let varX = 50
+function out(){
+    let varX = 35
+    function sumXand5(){
+        let varX = 10
+        return varX+5
     }
-    return somarXMais5()
+    return sumXand5()
 }
 
-console.log(fora())
-
-
-const aFunction = () => ((x=7), () =>(x+5)) ()
-
-console.log(aFunction())
-
-
-// arrow function usando apenas um parâmtro
-const namesLength = names.map( value => value.length )
-
-console.log(namesLength)
-
-//cópia da de cima, mas acessando o método length, a partir do objeto "{}"
-
-const namesLength2 = names.map( ({length}) => length )
-
-console.log(namesLength2)
+console.log(out())
 
 
 
