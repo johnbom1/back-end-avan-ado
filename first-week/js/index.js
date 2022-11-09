@@ -310,18 +310,47 @@ console.log(chars)
 // console.log(namesLength2)
 
 
-//closures
-let varX = 50
-function out(){
-    let varX = 35
-    function sumXand5(){
-        let varX = 10
-        return varX+5
+// //closures
+// let varX = 50
+// function out(){
+//     let varX = 35
+//     function sumXand5(){
+//         let varX = 10
+//         return varX+5
+//     }
+//     return sumXand5()
+// }
+
+// console.log(out())
+
+
+//Orientação a objetos
+
+class Product {
+    constructor(name, price){
+        this.name = name
+        this.price = price
     }
-    return sumXand5()
+    productDetails(){
+        return `O nome do produto é ${this.name} e o preço é: ${this.price}.`
+    }
+    static test(){
+        console.log('Testando o método estático...')
+    }
 }
 
-console.log(out())
+//instanciando um object Product
+
+const shirt = new Product('Camisa branca', 19.99)
+console.log(shirt.productDetails())
+
+//Usando método estático de uma classe.
+
+Product.test()
+
+
+
+
 
 
 
