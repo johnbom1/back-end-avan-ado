@@ -46,13 +46,7 @@
 const date = new Date()
 
 function funcao () {
-    let hora = date.getHours()
-    let min = date.getMinutes()
-    let sec = date.getSeconds()
-
-    let aux = (hora + ':' + min + ':' + sec)
-    console.log(aux)
-
+    return console.log(date.getHours()+':'+date.getMinutes()+':'+date.getSeconds())
 }
 
 
@@ -63,7 +57,7 @@ function funcao () {
 
 // setInterval(funcao, 100)
 // setInterval(funcao, 100)
-setInterval(funcao, 100)
+setInterval(funcao, 1000)
 
 
 
