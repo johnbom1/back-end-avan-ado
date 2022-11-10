@@ -15,32 +15,61 @@
 
 //callback
 
-//OBS: mesmo chamando a callback antes dos logs, os logs são impressos antes
-//pois, no callback, o node entende que ele é uma função que pode demorar, e por isso,
-//o node permite que o resto do código continue sendo lido e assim que a callback terminar de executar
-//o retorno será exibido.
+// //OBS: mesmo chamando a callback antes dos logs, os logs são impressos antes
+// //pois, no callback, o node entende que ele é uma função que pode demorar, e por isso,
+// //o node permite que o resto do código continue sendo lido e assim que a callback terminar de executar
+// //o retorno será exibido.
 
-const fs = require('fs')
-const { setTimeout } = require('timers/promises')
+// const fs = require('fs')
+// const { setTimeout } = require('timers/promises')
 
-console.log('Primeiro comando.')
+// console.log('Primeiro comando.')
 
-fs.readFile('./text.txt', callback)
+// fs.readFile('./text.txt', callback)
 
-function callback(err, content){
-    if(err) return console.error('erro')
-    console.log(String(content))
+// function callback(err, content){
+//     if(err) return console.error('erro')
+//     console.log(String(content))
+// }
+
+
+// console.log('Segundo comando.')
+// console.log('Terceiro comando.')
+
+
+// setTimeout(() => (console.log('Testando o setTimeout')), 3000)
+
+
+// console.log('comando que está após o setTimeout.')
+
+
+const date = new Date()
+
+function funcao () {
+    let hora = date.getHours()
+    let min = date.getMinutes()
+    let sec = date.getSeconds()
+
+    let aux = (hora + ':' + min + ':' + sec)
+    console.log(aux)
+
 }
 
 
-console.log('Segundo comando.')
-console.log('Terceiro comando.')
+// setTimeout(funcao, 5000)
+// setTimeout(funcao, 5000)
+// setTimeout(funcao, 5000)
 
 
-setTimeout(() => (console.log('Testando o setTimeout')), 3000)
+// setInterval(funcao, 100)
+// setInterval(funcao, 100)
+setInterval(funcao, 100)
 
 
-console.log('comando que está após o setTimeout.')
+
+
+
+
 
 
 
