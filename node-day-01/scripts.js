@@ -43,24 +43,38 @@
 // console.log('comando que está após o setTimeout.')
 
 
-const date = new Date()
+// const date = new Date()
 
-function funcao () {
-    return console.log(date.getHours()+':'+date.getMinutes()+':'+date.getSeconds())
+// function funcao () {
+//     return console.log(date.getHours()+':'+date.getMinutes()+':'+date.getSeconds())
+// }
+
+
+// setTimeout(funcao, 5000)
+// setTimeout(funcao, 5000)
+// setTimeout(funcao, 5000)
+
+
+// setInterval(funcao, 100)
+// setInterval(funcao, 100)
+// setInterval(funcao, 1000)
+
+//utilizando programação síncrona
+
+function sum(callback, callbackError){
+    const resultado = 1+1
+    if (resultado === 2){
+        callback()
+    }else{
+        callbackError()
+    }
 }
 
 
-// setTimeout(funcao, 5000)
-// setTimeout(funcao, 5000)
-// setTimeout(funcao, 5000)
+sum(()=> (console.log('Sucesso! A soma é 2.')),
+()=> (console.log('A soma não é 2. Alguma coisa deu errado...')))
 
-
-// setInterval(funcao, 100)
-// setInterval(funcao, 100)
-setInterval(funcao, 1000)
-
-
-
+console.log('testando exibição...')
 
 
 
