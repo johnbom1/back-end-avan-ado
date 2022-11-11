@@ -61,20 +61,39 @@
 
 //utilizando programação síncrona
 
-function sum(callback, callbackError){
-    const resultado = 1+1
+// function sum(callback, callbackError){
+//     const resultado = 1+1
+//     if (resultado === 2){
+//         callback()
+//     }else{
+//         callbackError()
+//     }
+// }
+
+
+// sum(()=> (console.log('Sucesso! A soma é 2.')),
+// ()=> (console.log('A soma não é 2. Alguma coisa deu errado...')))
+
+// console.log('testando exibição...')
+
+
+// Promise - promessa
+//then() 
+//resolve e reject 
+
+const promise = new Promise((resolve, reject)=> {
+    const resultado = 1+3
     if (resultado === 2){
-        callback()
+        resolve('Sucesso! A soma é 2.')
     }else{
-        callbackError()
+        reject('A soma não é 2. Alguma coisa deu errado...')
     }
-}
+      
+})
+
+promise.then((resultado)=>(console.log(resultado)), (erro)=>(console.log(erro)))
 
 
-sum(()=> (console.log('Sucesso! A soma é 2.')),
-()=> (console.log('A soma não é 2. Alguma coisa deu errado...')))
-
-console.log('testando exibição...')
 
 
 
