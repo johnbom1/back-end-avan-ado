@@ -81,18 +81,35 @@
 //then() 
 //resolve e reject 
 
-const promise = new Promise((resolve, reject)=> {
-    const resultado = 1+3
-    if (resultado === 2){
-        resolve('Sucesso! A soma é 2.')
-    }else{
-        reject('A soma não é 2. Alguma coisa deu errado...')
-    }
+// const promise = new Promise((resolve, reject)=> {
+//     const resultado = 1+3
+//     if (resultado === 2){
+//         resolve('Sucesso! A soma é 2.')
+//     }else{
+//         reject('A soma não é 2. Alguma coisa deu errado...')
+//     }
       
+// })
+
+// promise.then((resultado)=>(console.log(resultado)), (erro)=>(console.log(erro)))
+
+//voltando para callback
+
+const name = 'Paulo Sampaio'
+
+const whoIsTheBest = new Promise((resolve, reject)=>{
+    if (name != 'Paulo Sampaio'){
+    reject('Tá errado, Não tem como!')
+    }else{
+    resolve({
+        name: name,
+        message: `humildemente o melhor.`
+
+    })
+    }
 })
 
-promise.then((resultado)=>(console.log(resultado)), (erro)=>(console.log(erro)))
-
+whoIsTheBest.then(((success)=>(console.log(`${success.name} é ${success.message}`))), (erro)=>(console.log(erro)))
 
 
 
