@@ -95,21 +95,21 @@
 
 //voltando para callback
 
-const name = 'Paulo Sampaio'
+// const name = 'Paulo Sampaio'
 
-const whoIsTheBest = new Promise((resolve, reject)=>{
-    if (name != 'Paulo Sampaio'){
-    reject('Tá errado, Não tem como!')
-    }else{
-    resolve({
-        name: name,
-        message: `humildemente o melhor.`
+// const whoIsTheBest = new Promise((resolve, reject)=>{
+//     if (name != 'Paulo Sampaio'){
+//     reject('Tá errado, Não tem como!')
+//     }else{
+//     resolve({
+//         name: name,
+//         message: `humildemente o melhor.`
 
-    })
-    }
-})
+//     })
+//     }
+// })
 
-whoIsTheBest.then(((success)=>(console.log(`${success.name} é ${success.message}`))), (erro)=>(console.log(erro)))
+// whoIsTheBest.then(((success)=>(console.log(`${success.name} é ${success.message}`))), (erro)=>(console.log(erro)))
 
 
 
