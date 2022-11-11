@@ -1,30 +1,18 @@
 // requisição com o Fetch
-const nome = documhtment.querySelector('#lista')
+const lista = document.querySelector('#lista')
+
+
 fetch('https://jsonplaceholder.typicode.com/users')
 .then(T => T.json())
 
 .then((users) => (users.forEach(item => {
-    console.log(`${item['name']}`)
-    const items = nome.createElement('li')
-    const conteudo = nome.appendChild(items)
-    conteudo.innerHTML = `Nome: ${item.name} Email: ${item.email}`
+    const tuplas = document.createElement('li')
+    const conteudo = lista.appendChild(tuplas)
+    conteudo.innerHTML = (`Nome: ${item.name}  Email: ${item.email}`)
    
 
 }
 )))
-
-
-fetch('https://jsonplaceholder.typicode.com/users')
-.then(T => T.json())
-
-.then((users) => (users.forEach(item => {
-    console.log(`${item['email']}`)
-
-})))
-
-
-
-
 
 
 
