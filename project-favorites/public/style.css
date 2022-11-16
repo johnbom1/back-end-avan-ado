@@ -1,35 +1,43 @@
 body{
-    background-color: rgb(249, 239, 221);
+    background: rgb(2,0,36);
+    background: rgb(80,208,221);
+    background: linear-gradient(180deg, rgba(80,208,221,1) 0%, rgba(111,195,221,1) 15%, rgba(163,216,222,1) 54%, rgba(203,213,215,1) 85%);
     background-size: cover;
 }
 
 body h1 {
-    color: rgb(15, 152, 220);
-    font-size: 80px;
+    color: rgb(220, 15, 15);
+    font-size: 125px;
     text-align: center;   
 }
 
 body input {
-    border-style: double;
     border-radius: 5px;
-    border: 2px solid red;
+    border: 2px solid;
+    border-color: brown; 
     margin-left: auto;
     margin-right: auto;
     display: block;
     align-items: center;
     font-size: 25px;
+    width: 50%
 }
 
 body ul li {
-    color: rgb(56, 13, 232);
-    margin-block: 5px;
-    text-align: center;   
-    font-family: Verdana,Geneva, Tahoma, sans-serif;
+    color: rgb(49, 16, 236);
+    margin-block: 10px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style-type: none;
+    display: block;
+    font-weight: bold;
+}
 
-
+body ul li:hover {
+    color: rgb(220, 15, 15);
+    font-weight: bold;
 }
 
 html {
     min-height: 100%;
-    
  }
