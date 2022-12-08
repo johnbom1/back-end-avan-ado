@@ -7,6 +7,12 @@ const data = require('./urls.json')
  
 
 http.createServer((req, res) => {
+
+    const {name, url, del } = URL.parse(req.url, true).query
+
+    res.writeHead(200, {
+        'Access-Control-Allow-Origin': 'http://localhost:5000' //poderia usar '*' para aceitar tudo.
+    })
    
     function writeFile(cb){
         fs.writeFile(
@@ -19,7 +25,7 @@ http.createServer((req, res) => {
     
         )
     }
-    const {name, url, del } = URL.parse(req.url, true).query
+
     
     if(!name || !url)
         return res.end(JSON.stringify(data))
