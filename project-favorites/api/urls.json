@@ -7,6 +7,14 @@
     {
       "name": "teste",
       "url": "http://teste.com"
+    },
+    {
+      "name": "google",
+      "url": "https://google.com"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/"
     }
   ]
 }

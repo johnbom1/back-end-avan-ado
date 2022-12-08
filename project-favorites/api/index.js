@@ -2,6 +2,8 @@ const http = require('http')
 const URL = require('url')
 const fs = require('fs')
 const path = require('path')
+
+//importando urls
 const data = require('./urls.json')
 
  
@@ -20,7 +22,7 @@ http.createServer((req, res) => {
             JSON.stringify(data, null, 2),
             err => {
                 if (err) throw err
-                res.end('Operação realizada com sucesso!')
+                cb('Operação realizada com sucesso!')
             }
     
         )

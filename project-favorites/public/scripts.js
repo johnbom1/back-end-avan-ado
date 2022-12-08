@@ -9,6 +9,21 @@ async function load(){
 
 load()
 
+const url2 = 'http://localhost:3000'
+
+let _data = {
+    name: "foo",
+    url: "bar"
+  }
+
+    fetch(url2, {
+        method: "POST",
+        body: JSON.stringify(_data)
+    })
+        .then(response => response.json())
+        .then(json => console.log(json))
+        .catch(err => console.log('Erro de solicitação', err));
+
 function addElement({ name, url }) {
     const li = document.createElement('li')
     const a = document.createElement("a")
@@ -31,6 +46,11 @@ function removeElement(el) {
         el.parentNode.remove()
 }
 
+function addItemToFile({name, url}) {
+    var url = new URL("http://localhost:3000?"+"name="+name+"&url="+url)
+    fetch(url).then(console.log('ok'))
+}
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -47,6 +67,7 @@ form.addEventListener('submit', (event) => {
     if (!/^http/.test(url))
         return alert('Digite a url da maneira correta.')
 
+    addItemToFile({ name,url })
     addElement({ name, url })
 
     input.value = ''
