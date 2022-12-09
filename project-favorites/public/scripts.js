@@ -44,13 +44,8 @@ function addElement({ name, url }) {
 function removeElement(el) {
     if (confirm('Tem certeza que deseja deletar?'))
         el.parentNode.remove()
+        fetch("http://localhost:3000?"+el.parentNode.querySelector('a').innerHTML+'&url='+el.parentNode.querySelector('a').href.slice(0,-1)+'&del=1')
 }
-
-function addItemToFile({name, url}) {
-    var url = new URL("http://localhost:3000?"+"name="+name+"&url="+url)
-    fetch(url).then(console.log('ok'))
-}
-
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -67,8 +62,7 @@ form.addEventListener('submit', (event) => {
     if (!/^http/.test(url))
         return alert('Digite a url da maneira correta.')
 
-    addItemToFile({ name,url })
     addElement({ name, url })
-
+    fetch("http://localhost:3000?"+"name="+name+"&url="+url)
     input.value = ''
 })
