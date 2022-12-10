@@ -34,17 +34,17 @@ function addElement({ name, url }) {
     a.target = "_blank"
 
     trash.innerHTML = "x"
-    trash.onclick = () => removeElement(trash)
+    trash.onclick = () => removeElement(trash, name, url)
 
     li.append(a)
     li.append(trash)
     ul.append(li)
 }
 
-function removeElement(el) {
+function removeElement(el,name,url) {
     if (confirm('Tem certeza que deseja deletar?'))
         el.parentNode.remove()
-        fetch("http://localhost:3000?"+el.parentNode.querySelector('a').innerHTML+'&url='+el.parentNode.querySelector('a').href.slice(0,-1)+'&del=1')
+        fetch("http://localhost:3000?name="+name+"&url="+url+'&del=1')
 }
 form.addEventListener('submit', (event) => {
     event.preventDefault();
